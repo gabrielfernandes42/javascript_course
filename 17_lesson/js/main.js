@@ -25,7 +25,7 @@
 // const myPizza = pizzaFactory("small");
 // myPizza.bake();
 
-//
+//Private field classes, its 91% in "Can i use", but i don't know if people use 
 class Pizza {
   constructor(pizzaSize) {
     this._size = pizzaSize;
