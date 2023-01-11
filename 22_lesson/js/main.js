@@ -19,3 +19,4 @@ sessionStorage.setItem("mySessionstore", JSON.stringify(myArray));
 const mySessionData = JSON.parse(sessionStorage.getItem("mySessionstore"));
 
 console.log(mySessionData);
+console.log(localStorage.length);
