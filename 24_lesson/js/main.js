@@ -31,4 +31,4 @@ const reducePostValue = mappedPost.reduce((sum, post) => {
   return sum + post;
 });
 
-console.log(reducePostValue)
+console.log(reducePostValue);
