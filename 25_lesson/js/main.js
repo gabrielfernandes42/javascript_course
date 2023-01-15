@@ -62,26 +62,33 @@
 
 // _____________________________________________________________________________
 //async / await
+//Workflow function
+// const getalluserEmails = async () => {
+//   //telling the code to wait the results from the fetch ⬇️
+//   const response = await fetch("https://jsonplaceholder.typicode.com/users");
+//   const jsonUserData = await response.json();
+//   const userEmailArray = jsonUserData.map((user) => {
+//     return user.email;
+//   });
+//   postToWebPage(userEmailArray);
+// };
 
-const myUsers = {
-  userList: [],
+// const postToWebPage = (data) => {
+//   console.log(data);
+// };
+// getalluserEmails();
+
+//2nd parameter of fech is a object
+
+const getDadJoke = async () => {
+  const response = await fetch("https://icanhazdadjoke.com/", {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+    },
+  });
+
+  const jsonJkoeData = await response.json();
+  console.log(jsonJkoeData);
 };
-
-const myCoolFunction = async () => {
-  //telling the code to wait the results from the fetch ⬇️
-  const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  //this line also use await, because also return a promise
-  const jsonUserrData = await response.json();
-  return jsonUserrData;
-};
-
-myCoolFunction();
-
-const anotherFunc = async () => {
-  const data = await myCoolFunction();
-  myUsers.userList = data;
-  console.log(myUsers.userList);
-};
-
-anotherFunc();
-console.log(myUsers.userList);
+getDadJoke();
